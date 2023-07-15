@@ -87,7 +87,7 @@ public:
 
 		//cek apakah antrian kosong
 
-		if (FRONT = -1) {
+		if (FRONT == -1) {
 			cout << "Queue is emptyin";
 			return;
 		}
