@@ -43,7 +43,7 @@ public:
 		else {
 			// Jika REAR berada di posisi terakhir array, kembali ke awal array
 
-			if (REAR = max - 1)
+			if (REAR == max - 1)
 				REAR = 0;
 			else
 				REAR = REAR + 1;
@@ -56,7 +56,7 @@ public:
 
 	void remove() {
 		// Cek apakah antrian kosong
-		if (FRONT = -1) {
+		if (FRONT == -1) {
 			cout << "Queue underflow\n";
 			return;
 		}
@@ -65,7 +65,7 @@ public:
 		// Cek jika antrian hanya memiliki satu elemen
 
 
-		if (FRONT = REAR) {
+		if (FRONT == REAR) {
 			FRONT = -1;
 			REAR = -1;
 		}
