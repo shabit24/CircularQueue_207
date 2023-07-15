@@ -2,8 +2,8 @@
 using namespace std;
 
 class Queues {
-    int FRONT, REAR, max = 5;
-    int queue_array[5];
+	int FRONT, REAR, max = 5;
+	int queue_array[5];
 
 
 public:
@@ -15,7 +15,7 @@ public:
 
 	}
 
-void insert() {
+	void insert() {
 
 		int num;
 		cout << "Enter a number: ";
@@ -33,89 +33,96 @@ void insert() {
 
 		// Cek apakah antrian kosong
 
-	if (FRONT == -1) {
+		if (FRONT == -1) {
 
 			FRONT = 0;
 			REAR = 0;
 
 		}
 
-else {
-      // Jika REAR berada di posisi terakhir array, kembali ke awal array
+		else {
+			// Jika REAR berada di posisi terakhir array, kembali ke awal array
 
-		if (REAR = max - 1)
-			REAR = 0;
-		else
-			REAR = REAR + 1;
+			if (REAR = max - 1)
+				REAR = 0;
+			else
+				REAR = REAR + 1;
 
-	}
+		}
 
-	queue_array[REAR] = num;
-
-}
-
-void remove() {
-	// Cek apakah antrian kosong
-	if (FRONT = -1) {
-		cout << "Queue underflow\n";
-		return;
-	}
-	cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
-
-	// Cek jika antrian hanya memiliki satu elemen
-
-
-	if (FRONT = REAR) {
-		FRONT = -1;
-		REAR = -1;
-	}
-	else {
-
-		// Jika elemen yang dihapus berada di posisi terakhir array, kembali ke awal array
-
-		if (FRONT == max - 1)
-			FRONT = 0;
-		else
-			FRONT = FRONT + 1;
+		queue_array[REAR] = num;
 
 	}
-}
-void display() {
-     int FRONT_position = FRONT;
-	 int REAR_position = REAR;
+
+	void remove() {
+		// Cek apakah antrian kosong
+		if (FRONT = -1) {
+			cout << "Queue underflow\n";
+			return;
+		}
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
+
+		// Cek jika antrian hanya memiliki satu elemen
 
 
-	 //cek apakah antrian kosong
+		if (FRONT = REAR) {
+			FRONT = -1;
+			REAR = -1;
+		}
+		else {
 
-	 if (FRONT = -1) {
-		 cout << "Queue is emptyin";
-		 return;
-	 }
+			// Jika elemen yang dihapus berada di posisi terakhir array, kembali ke awal array
 
-	 cout << "\nElements in the queue are...\n";
+			if (FRONT == max - 1)
+				FRONT = 0;
+			else
+				FRONT = FRONT + 1;
 
-	 //JIKA FRONT position - REAR position, iterasi dari FRONT Hingga REA
-
-	 if (FRONT_position <= REAR_position) {
-		 while (FRONT_position <= REAR_position) {
-			 cout << queue_array[FRONT_position] << "  ";
-			 FRONT_position++;
-		 }
-		 cout << endl;
-
-	 }
-	 else {
-		 // DINE FRONT_position > REAR position, iterasi dari FONT hingga akhir array
-
-		 while (FRONT_position <= max - 1) {
-
-			 cout << queue_array[FRONT_position] << " ";
-			 FRONT_position++;
-		 }
-
-		 FRONT_position = 0;
-
-		 // Iterati dari mal array hingga REAR
+		}
+	}
+	void display() {
+		int FRONT_position = FRONT;
+		int REAR_position = REAR;
 
 
+		//cek apakah antrian kosong
+
+		if (FRONT = -1) {
+			cout << "Queue is emptyin";
+			return;
+		}
+
+		cout << "\nElements in the queue are...\n";
+
+		//JIKA FRONT position - REAR position, iterasi dari FRONT Hingga REA
+
+		if (FRONT_position <= REAR_position) {
+			while (FRONT_position <= REAR_position) {
+				cout << queue_array[FRONT_position] << "  ";
+				FRONT_position++;
+			}
+			cout << endl;
+
+		}
+		else {
+			// DINE FRONT_position > REAR position, iterasi dari FONT hingga akhir array
+
+			while (FRONT_position <= max - 1) {
+
+				cout << queue_array[FRONT_position] << " ";
+				FRONT_position++;
+			}
+
+			FRONT_position = 0;
+
+			// Iterati dari mal array hingga REAR
+
+			while (FRONT_position < -REAR_position) {
+				cout << queue_array[FRONT_position] << " ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+	}
+};
 
