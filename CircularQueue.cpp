@@ -55,19 +55,19 @@ else {
 }
 
 void remove() {
-      // Cek apakah antrian kosong
-    if (FRONT = -1) {
+	// Cek apakah antrian kosong
+	if (FRONT = -1) {
 		cout << "Queue underflow\n";
 		return;
-	} 
+	}
 	cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
 	// Cek jika antrian hanya memiliki satu elemen
 
 
 	if (FRONT = REAR) {
-         FRONT = -1;
-		 REAR = -1;
+		FRONT = -1;
+		REAR = -1;
 	}
 	else {
 
@@ -79,5 +79,11 @@ void remove() {
 			FRONT = FRONT + 1;
 
 	}
+}
+void display() {
+     int FRONT_position = FRONT;
+	 int REAR_position = REAR;
+
+
 
 
