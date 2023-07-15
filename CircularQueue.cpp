@@ -7,8 +7,7 @@ class Queues {
 
 
 public:
-
-	Queues() {
+       Queues() {
 
 		FRONT = -1;
 		REAR = -1;
@@ -117,7 +116,7 @@ public:
 
 			// Iterati dari mal array hingga REAR
 
-			while (FRONT_position < REAR_position) {
+			while (FRONT_position <= REAR_position) {
 				cout << queue_array[FRONT_position] << " ";
 				FRONT_position++;
 			}
