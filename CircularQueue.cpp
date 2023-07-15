@@ -64,6 +64,7 @@ void remove() {
 
 	// Cek jika antrian hanya memiliki satu elemen
 
+
 	if (FRONT = REAR) {
          FRONT = -1;
 		 REAR = -1;
